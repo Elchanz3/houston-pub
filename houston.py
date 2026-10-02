@@ -141,6 +141,11 @@ def main():
 
         overwrite_iram(device, debug_mode, SOC_DATA[soc]["rx_address"], SOC_DATA[soc]["usb_struct_offset"])
 
+        if soc == "Exynos9820\00":
+            from modules.exynos9825 import run_chain
+            run_chain(device, args.files)
+            return
+
         logger.error("Wait for USB to re-initialise.")
         device = find_device(True)
         logger.warning("Found device.")

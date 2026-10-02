@@ -15,6 +15,12 @@ SOC_DATA = {
         "quirks": 0
     },
 
+    "Exynos9820\00": {
+        "rx_address": 0x02022000,
+        "usb_struct_offset": 0x0480,
+        "quirks": 0
+    },
+
     "Exynos3830\00": {
         "rx_address": 0x02022000,
         "usb_struct_offset": 0x0480,
